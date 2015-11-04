@@ -1,20 +1,20 @@
-# The official raywenderlich.com Objective-C style guide.
+# The official raywenderlich.com의 Objective-C 스타일 가이드 한글화 문서 입니다.
 
 This style guide outlines the coding conventions for raywenderlich.com.
 
-## Introduction
+## 소개
 
 The reason we made this style guide was so that we could keep the code in our books, tutorials, and starter kits nice and consistent - even though we have many different authors working on the books.
 
 This style guide is different from other Objective-C style guides you may see, because the focus is centered on readability for print and the web. Many of the decisions were made with an eye toward conserving space for print, easy legibility, and tutorial writing.
 
-## Credits
+## 크래딧
 
 The creation of this style guide was a collaborative effort from various raywenderlich.com team members under the direction of Nicholas Waynik.  The team includes: [Soheil Moayedi Azarpour](https://github.com/moayes), [Ricardo Rendon Cepeda](https://github.com/ricardo-rendoncepeda), [Tony Dahbura](https://github.com/tdahbura), [Colin Eberhardt](https://github.com/ColinEberhardt), [Matt Galloway](https://github.com/mattjgalloway), [Greg Heo](https://github.com/gregheo), [Matthijs Hollemans](https://github.com/hollance), [Christopher LaPollo](https://github.com/elephantronic), [Saul Mora](https://github.com/casademora), [Andy Pereira](https://github.com/macandyp), [Mic Pringle](https://github.com/micpringle), [Pietro Rea](https://github.com/pietrorea), [Cesare Rocchi](https://github.com/funkyboy), [Marin Todorov](https://github.com/icanzilb), [Nicholas Waynik](https://github.com/ndubbs), and [Ray Wenderlich](https://github.com/raywenderlich)
 
 We would like to thank the creators of the [New York Times](https://github.com/NYTimes/objective-c-style-guide) and [Robots & Pencils'](https://github.com/RobotsAndPencils/objective-c-style-guide) Objective-C Style Guides.  These two style guides provided a solid starting point for this guide to be created and based upon.
 
-## Background
+## 배경설명
 
 Here are some of the documents from Apple that informed the style guide. If something isn't mentioned here, it's probably covered in great detail in one of these:
 
@@ -23,7 +23,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * [iOS App Programming Guide](http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html)
 
-## Table of Contents
+## 목차
 
 * [Language](#language)
 * [Code Organization](#code-organization)
@@ -54,9 +54,9 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Xcode Project](#xcode-project)
 
 
-## Language
+## 사용하는 언어
 
-US English should be used.
+US 영어를 사용한다.
 
 **Preferred:**
 ```objc
@@ -166,13 +166,13 @@ else {
                  }];
 ```
 
-## Comments
+## 주석
 
 When they are needed, comments should be used to explain **why** a particular piece of code does something. Any comments that are used must be kept up-to-date or deleted.
 
 Block comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. *Exception: This does not apply to those comments used to generate documentation.*
 
-## Naming
+## 네이밍
 
 Apple naming conventions should be adhered to wherever possible, especially those related to [memory management rules](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/MemoryMgmt/Articles/MemoryMgmt.html) ([NARC](http://stackoverflow.com/a/2865194/340508)).
 
@@ -228,7 +228,7 @@ An exception to this: inside initializers, the backing instance variable (i.e. _
 
 Local variables should not contain underscores.
 
-## Methods
+## 메소드
 
 In method signatures, there should be a space after the method type (-/+ symbol). There should be a space between the method segments (matching Apple's style).  Always include a keyword and be descriptive with the word before the argument which describes the argument.
 
@@ -252,7 +252,7 @@ The usage of the word "and" is reserved.  It should not be used for multiple par
 - (instancetype)initWith:(int)width and:(int)height;  // Never do this.
 ```
 
-## Variables
+## 변수
 
 Variables should be named as descriptively as possible. Single letter variable names should be avoided except in `for()` loops.
 
@@ -561,7 +561,7 @@ result = isHorizontal ? x : y;
 result = a > b ? x = c > d ? c : d : y;
 ```
 
-## Init Methods
+## Init 메소드
 
 Init methods should follow the convention provided by Apple's generated code template.  A return type of 'instancetype' should also be used instead of 'id'.
 
@@ -577,7 +577,7 @@ Init methods should follow the convention provided by Apple's generated code tem
 
 See [Class Constructor Methods](#class-constructor-methods) for link to article on instancetype.
 
-## Class Constructor Methods
+## Class 생성자 메소드
 
 Where class constructor methods are used, these should always return type of 'instancetype' and never 'id'. This ensures the compiler correctly infers the result type. 
 
@@ -589,7 +589,7 @@ Where class constructor methods are used, these should always return type of 'in
 
 More information on instancetype can be found on [NSHipster.com](http://nshipster.com/instancetype/).
 
-## CGRect Functions
+## CGRect 함수들
 
 When accessing the `x`, `y`, `width`, or `height` of a `CGRect`, always use the [`CGGeometry` functions](http://developer.apple.com/library/ios/#documentation/graphicsimaging/reference/CGGeometry/Reference/reference.html) instead of direct struct member access. From Apple's `CGGeometry` reference:
 
@@ -645,7 +645,7 @@ When coding with conditionals, the left hand margin of the code should be the "g
 }
 ```
 
-## Error handling
+## 에러 핸들링
 
 When methods return an error parameter by reference, switch on the returned value, not the error variable.
 
@@ -669,7 +669,7 @@ if (error) {
 Some of Apple’s APIs write garbage values to the error parameter (if non-NULL) in successful cases, so switching on the error can cause false negatives (and subsequently crash).
 
 
-## Singletons
+## 싱글톤
 
 Singleton objects should use a thread-safe pattern for creating their shared instance.
 ```objc
@@ -717,13 +717,13 @@ Smiley faces are a very prominent style feature of the raywenderlich.com site!  
 ```  
 
 
-## Xcode project
+## Xcode 프로젝트
 
 The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. Any Xcode groups created should be reflected by folders in the filesystem. Code should be grouped not only by type, but also by feature for greater clarity.
 
 When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
 
-# Other Objective-C Style Guides
+# 다른 Objective-C 스타일 가이드
 
 If ours doesn't fit your tastes, have a look at some other style guides:
 
