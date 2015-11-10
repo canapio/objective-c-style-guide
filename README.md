@@ -16,7 +16,7 @@ We would like to thank the creators of the [New York Times](https://github.com/N
 
 ## 배경설명
 
-Here are some of the documents from Apple that informed the style guide. If something isn't mentioned here, it's probably covered in great detail in one of these:
+아래 링크는 애플에서 제공하는 스타일 가이드에관한 문서이다. 만약 이 문서에서 언급되지 않은게 있다면, 그것은 아래 문서들중에 더 자세하게 언급하고 있을것이다.
 
 * [The Objective-C Programming Language](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
 * [Cocoa Fundamentals Guide](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaFundamentals/Introduction/Introduction.html)
@@ -671,7 +671,8 @@ Some of Apple’s APIs write garbage values to the error parameter (if non-NULL)
 
 ## 싱글톤
 
-Singleton objects should use a thread-safe pattern for creating their shared instance.
+싱글톤 객체는 공유된 인스턴스를 만들기위해 thread-safe 패턴을 사용해야한다.
+
 ```objc
 + (instancetype)sharedInstance {
   static id sharedInstance = nil;
@@ -687,9 +688,9 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
 
 
-## Line Breaks
+## 개행
 
-Line breaks are an important topic since this style guide is focused for print and online readability.
+개행은 출력하거나 온라인상의 코드 가독성이 주목받으면서 중요하게 취급되고있다.
 
 For example:
 ```objc
@@ -725,7 +726,7 @@ When possible, always turn on "Treat Warnings as Errors" in the target's Build S
 
 # 다른 Objective-C 스타일 가이드
 
-If ours doesn't fit your tastes, have a look at some other style guides:
+만약 이 문서의 스타일이 당신이랑 맞지 않다면 아래 다른 스타일 가이드를 참고해주길 바란다.
 
 * [Robots & Pencils](https://github.com/RobotsAndPencils/objective-c-style-guide)
 * [New York Times](https://github.com/NYTimes/objective-c-style-guide)
