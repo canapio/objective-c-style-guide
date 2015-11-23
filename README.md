@@ -1,12 +1,12 @@
 # The official raywenderlich.com의 Objective-C 스타일 가이드 한글화 문서 입니다.
 
-This style guide outlines the coding conventions for raywenderlich.com.
+이 스타일은 raywenderlich.com의 coding convention을 아웃라인을 가이드합니다.
 
 ## 소개
 
-The reason we made this style guide was so that we could keep the code in our books, tutorials, and starter kits nice and consistent - even though we have many different authors working on the books.
+이 스타일 가이드를 만든 이유는 각기 다른 저자들이 글을 쓸지라도 책이나 튜토리얼, 입문자 도구를 깔끔하고 일관성있게 하기위함이다.
 
-This style guide is different from other Objective-C style guides you may see, because the focus is centered on readability for print and the web. Many of the decisions were made with an eye toward conserving space for print, easy legibility, and tutorial writing.
+본 스타일 가이드는 print나 web에 가독성에 초점이 맞춰져있기 때문에 당신이 봤던 Objective-C 스타일 가이드와 다를것이다. 많은 결정들은 프린트했을때 눈의 편안함이나, 읽기 쉽거나, 튜토리얼 작성에 적당하게 만들어졌다.
 
 ## 크래딧
 
@@ -190,7 +190,7 @@ UIButton *settingsButton;
 UIButton *setBut;
 ```
 
-A three letter prefix should always be used for class names and constants, however may be omitted for Core Data entity names. For any official raywenderlich.com books, starter kits, or tutorials, the prefix 'RWT' should be used.
+접두로 대문자 3개를 붙여 클래스 이름이나 상수 이름으로 사용될 수 있다(Core Data entity 이름에서는 생략될 수 있다). 공식 raywnderlich.com 책, starter kits, 강좌에서는 RWT를 사용한다.
 
 Constants should be camel-case with all words capitalized and prefixed by the related class name for clarity.
 
@@ -206,7 +206,7 @@ static NSTimeInterval const RWTTutorialViewControllerNavigationFadeAnimationDura
 static NSTimeInterval const fadetime = 1.7;
 ```
 
-Properties should be camel-case with the leading word being lowercase. Use auto-synthesis for properties rather than manual @synthesize statements unless you have good reason.
+프로퍼티는 첫글자만 소문자로하여 camel-case 방식을 사용한다.  Use auto-synthesis for properties rather than manual @synthesize statements unless you have good reason.
 
 **Preferred:**
 
@@ -230,9 +230,9 @@ Local variables should not contain underscores.
 
 ## 메소드
 
-In method signatures, there should be a space after the method type (-/+ symbol). There should be a space between the method segments (matching Apple's style).  Always include a keyword and be descriptive with the word before the argument which describes the argument.
+메소드 시그니쳐에서 메소드 타입(-/+ 기호)을 적은 뒤에 띄어쓰기를 해야한다. 메소드 세그먼트 사이에 띄쓰기가 있어야한다(Apple's 스타일과 동일). 항상 키워드를 포함하고 인자의 설명을 인자 앞에 적어 설명가능해야한다.
 
-The usage of the word "and" is reserved.  It should not be used for multiple parameters as illustrated in the `initWithWidth:height:` example below.
+"and"라는 단어 사용은 지양한다. `initWithWidth:height:` 예제에서 보여주는 것과 같이 여러 파라미터를 표현하기위해 사용되어서는 안된다.
 
 **Preferred:**
 ```objc
@@ -254,7 +254,7 @@ The usage of the word "and" is reserved.  It should not be used for multiple par
 
 ## 변수
 
-Variables should be named as descriptively as possible. Single letter variable names should be avoided except in `for()` loops.
+변수는 가능한 설명가능한 이름으로 선언되어야한다. `for()`루프에서 사용되는 변수를 제외한 모든 변수는 한글자를 피해야한다.
 
 Asterisks indicating pointers belong with the variable, e.g., `NSString *text` not `NSString* text` or `NSString * text`, except in the case of constants.
 
